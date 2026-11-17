@@ -15,3 +15,12 @@ you never need to touch this repository.
 - Eleventy builds `src/` into `_site/`, which Netlify serves.
 
 Local: `npm install && npm run dev`
+
+## Hosting
+
+Build command: `npm run build`
+Build output directory: `_site`
+Node version: 22 (pinned in `.node-version`)
+
+Caching and header rules live in `src/_headers` (Cloudflare Pages).
+`netlify.toml` is kept only while the Netlify deploy is still running.
