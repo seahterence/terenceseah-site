@@ -1,0 +1,101 @@
+---
+layout: base.njk
+title: "Terence Seah Reviews"
+title_tag: "Singapore New Launch Condo Reviews | Terence Seah"
+description: "First-hand reviews of Singapore new launch condos: location, layouts, pricing and who each project suits. From show gallery visits by Terence Seah, ERA."
+permalink: /index.html
+---
+{% set latest = collections.reviews | last %}
+<section class="hero wrap" aria-labelledby="featured">
+  <div class="hero-text">
+    <p class="eyebrow">Latest review &middot; {{ latest.data.eyebrow }}</p>
+    <h1 id="featured">{{ latest.data.title }}</h1>
+    <p class="standfirst">{{ latest.data.standfirst }}</p>
+    <dl class="facts">
+      {% for s in latest.data.specs.slice(0,4) %}<div class="fact"><dt>{{ s.label }}</dt><dd>{{ s.value }}</dd></div>{% endfor %}
+    </dl>
+    <a class="btn" href="{{ latest.url }}">Read the review</a>
+  </div>
+  <div class="hero-img">
+    <img src="{{ latest.data.hero }}" alt="{{ latest.data.heroAlt }}">
+    <span class="shot-note">Shot on site &mdash; Terence Seah</span>
+  </div>
+</section>
+
+<section class="method">
+  <div class="wrap">
+    <p class="eyebrow">How these reviews are made</p>
+    <h2>Every project here was <em>visited, photographed and questioned</em> before a word was written.</h2>
+    <div class="cols">
+      <div class="col">
+        <span class="num">01</span>
+        <h3>I go myself</h3>
+        <p>Show gallery, surrounding streets, the approach road at peak hour. Reviews are based on being there, not on the developer's brochure.</p>
+      </div>
+      <div class="col">
+        <span class="num">02</span>
+        <h3>I shoot it myself</h3>
+        <p>Every photograph on this site is mine. Not renders, not marketing images &mdash; what the place actually looks like when you stand in it.</p>
+      </div>
+      <div class="col">
+        <span class="num">03</span>
+        <h3>I say who should skip it</h3>
+        <p>No project suits everybody. Every review ends by naming what works, what does not, and the buyer who should look elsewhere.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap" id="reviews">
+  <div class="sec-head">
+    <h2>The reviews</h2>
+    <span class="count">Singapore new launches</span>
+  </div>
+  {% for r in collections.reviews | reverse %}
+  <a class="entry" href="{{ r.url }}">
+    <span class="idx">{{ r.data.index }}</span>
+    <div>
+      <h3 class="entry-title">{{ r.data.title }}</h3>
+      <p class="entry-meta">{{ r.data.meta }} &middot; <span>{{ r.data.readtime }}</span></p>
+      <p class="dek">{{ r.data.dek }}</p>
+      <div class="tags">{% for t in r.data.tags_list %}<span class="tag">{{ t }}</span>{% endfor %}</div>
+    </div>
+    <div class="entry-thumb"><img src="{{ r.data.thumb }}" alt="{{ r.data.title }}"></div>
+  </a>
+  {% endfor %}
+  <div class="entry">
+    <span class="idx">{{ collections.reviews.length + 1 }}</span>
+    <div class="slot">
+      <p><strong>Your next review drops in here.</strong> Headline, spec panel, your photographs, the verdict. The layout is already built &mdash; you only write.</p>
+      <a class="btn ghost" href="/admin/">Write one</a>
+    </div>
+  </div>
+</section>
+
+<section class="creds" id="about">
+  <div class="wrap creds-in">
+    <div class="portrait"><img src="/img/portrait.jpg" alt="Terence Seah"></div>
+    <div>
+      <p class="eyebrow">Who is writing this</p>
+      <h2>I have sat on both sides of the table.</h2>
+      <p>Twenty-four years in Singapore real estate, in both developer and agency roles &mdash; land purchase, development, policy change, collective sales and consultancy for developers. I also run seminars and training on the same ground.</p>
+      <p>That is why these reviews read differently. I am not describing a project from the outside; I have been in the room where ones like it were priced and planned.</p>
+      <div class="statline">
+        <div class="stat"><b>24</b><span>Years in the industry</span></div>
+        <div class="stat"><b>Both</b><span>Developer &amp; agency side</span></div>
+        <div class="stat"><b>All</b><span>Photographs my own</span></div>
+      </div>
+      <a class="btn ghost" href="/about/">More about me</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact wrap" id="contact">
+  <p class="eyebrow">Thinking about one of these?</p>
+  <h2>Tell me the project. I will tell you <em>who it actually suits</em>.</h2>
+  <p>Straight answer, no pitch. If it is wrong for you, I would rather say so than sell it to you.</p>
+  <div class="actions">
+    <a class="btn" href="{{ site.whatsapp }}">WhatsApp {{ site.phone }}</a>
+    <a class="btn ghost" href="mailto:{{ site.email }}">Email me</a>
+  </div>
+</section>

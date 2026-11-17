@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title_tag or title }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<meta property="og:title" content="{{ title_tag or title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:type" content="{{ ogtype or 'website' }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+{% if hero %}<meta property="og:image" content="{{ site.url }}{{ hero }}">{% endif %}
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/site.css">
+{% block head %}{% endblock %}
+</head>
+<body>
+<a class="skip" href="#start">Skip to content</a>
+
+<header class="mast">
+  <div class="wrap mast-in">
+    <a class="word" href="/">Terence Seah <em>Reviews</em></a>
+    <nav class="main" aria-label="Main">
+      <a href="/my-blog/"{% if nav == 'reviews' %} aria-current="page"{% endif %}>Reviews</a>
+      <a href="/about/"{% if nav == 'about' %} aria-current="page"{% endif %}>About</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="start">
+{{ content | safe }}
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-in">
+      <div><a class="word" href="/">Terence Seah <em>Reviews</em></a></div>
+      <div>
+        <a href="{{ site.whatsapp }}">{{ site.phone }}</a><br>
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </div>
+    </div>
+    <p class="disclosure">
+      Terence Seah &middot; CEA Reg. No. {{ site.cea }} &middot; Senior Group Division Director, {{ site.agency }} (Licence No. {{ site.agencyLicence }}).
+      Reviews on this site reflect my own assessment after visiting each development. I am a licensed salesperson and may represent some of the projects reviewed here.
+    </p>
+  </div>
+</footer>
+</body>
+</html>

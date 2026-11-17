@@ -1,0 +1,4 @@
+{
+  "layout": "review.njk",
+  "permalink": "/post/{{ page.fileSlug }}/index.html"
+}

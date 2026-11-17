@@ -1,0 +1,88 @@
+---
+layout: base.njk
+nav: reviews
+ogtype: article
+---
+<section class="opener wrap">
+  <p class="eyebrow">Review {{ index }} &middot; {{ eyebrow }}</p>
+  <h1>{{ title }}</h1>
+  <p class="standfirst">{{ standfirst }}</p>
+  <div class="byline">
+    <span><b>Terence Seah</b></span>
+    <span>{{ date | readableDate }}</span>
+    {% if readtime %}<span>{{ readtime }}</span>{% endif %}
+    <span>Photographs by the author</span>
+  </div>
+</section>
+
+{% if hero %}<div class="bleed"><img src="{{ hero }}" alt="{{ heroAlt or title }}"></div>{% endif %}
+
+<div class="wrap">
+  {% if specs %}
+  <dl class="spec">
+    {% for s in specs %}<div><dt>{{ s.label }}</dt><dd>{{ s.value }}</dd></div>{% endfor %}
+  </dl>
+  {% endif %}
+
+  <article class="body">
+    {{ content | safe }}
+
+    {% if gallery %}
+    <div class="gallery">
+      {% for g in gallery %}<img src="{{ g.image }}" alt="{{ g.alt or title }}">{% endfor %}
+    </div>
+    <p class="credit">Copyright &amp; photo credits: Terence Seah</p>
+    {% endif %}
+  </article>
+</div>
+
+{% if pros or cons %}
+<section class="verdict">
+  <div class="wrap">
+    <h2>The verdict</h2>
+    <p class="lede">No project suits everybody. Here is what works and what does not.</p>
+    <div class="vgrid">
+      <div class="vcol">
+        <h3>What works</h3>
+        <ul>{% for p in pros %}<li>{{ p }}</li>{% endfor %}</ul>
+      </div>
+      <div class="vcol against">
+        <h3>What does not</h3>
+        <ul>{% for c in cons %}<li>{{ c }}</li>{% endfor %}</ul>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<div class="wrap">
+  {% if conclusion %}
+  <div class="closing body">
+    <h2>Conclusion</h2>
+    {{ conclusion | md | safe }}
+  </div>
+  {% endif %}
+
+  <div class="disclaimer">
+    <b>Disclaimer</b>
+    {{ disclaimer or "This is not a paid review, and I do not own a unit there. Images of the development are artist's impressions and may differ from the finished building. I am a licensed salesperson with ERA Realty Network (CEA Reg. No. R007780E) and may represent projects reviewed on this site." }}
+  </div>
+
+  {% set others = collections.reviews | reject("equalto", page) %}
+  {% if collections.reviews.length > 1 %}
+  <div class="nextup">
+    <div class="sec-head"><h2>Also reviewed</h2><span class="count">Continue reading</span></div>
+    {% for r in collections.reviews %}{% if r.url != page.url %}
+    <a class="entry" href="{{ r.url }}">
+      <span class="idx">{{ r.data.index }}</span>
+      <div>
+        <h3 class="entry-title">{{ r.data.title }}</h3>
+        <p class="entry-meta">{{ r.data.meta }} &middot; <span>{{ r.data.readtime }}</span></p>
+        <p class="dek">{{ r.data.dek }}</p>
+      </div>
+      <div class="entry-thumb"><img src="{{ r.data.thumb }}" alt="{{ r.data.title }}"></div>
+    </a>
+    {% endif %}{% endfor %}
+  </div>
+  {% endif %}
+</div>

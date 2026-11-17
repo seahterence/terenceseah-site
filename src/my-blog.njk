@@ -1,0 +1,28 @@
+---
+layout: base.njk
+nav: reviews
+title: "Reviews"
+title_tag: "New Launch Condo Reviews Singapore | Terence Seah"
+description: "Reviews of Singapore new launch condos: location, layouts, pricing and who each project suits. Written after visiting the show galleries in person."
+permalink: /my-blog/index.html
+---
+<section class="opener wrap">
+  <p class="eyebrow">Every review</p>
+  <h1>Singapore new launches, visited in person</h1>
+  <p class="standfirst">Each one written after a show gallery visit, photographed by me, and ending with who the project suits and who should look elsewhere.</p>
+</section>
+
+<section class="section wrap">
+  {% for r in collections.reviews | reverse %}
+  <a class="entry" href="{{ r.url }}">
+    <span class="idx">{{ r.data.index }}</span>
+    <div>
+      <h3 class="entry-title">{{ r.data.title }}</h3>
+      <p class="entry-meta">{{ r.data.meta }} &middot; <span>{{ r.data.readtime }}</span></p>
+      <p class="dek">{{ r.data.dek }}</p>
+      <div class="tags">{% for t in r.data.tags_list %}<span class="tag">{{ t }}</span>{% endfor %}</div>
+    </div>
+    <div class="entry-thumb"><img src="{{ r.data.thumb }}" alt="{{ r.data.title }}"></div>
+  </a>
+  {% endfor %}
+</section>

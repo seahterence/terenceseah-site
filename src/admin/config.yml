@@ -1,0 +1,54 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/img"
+public_folder: "/img"
+
+publish_mode: simple
+site_url: https://www.terenceseah.com
+
+collections:
+  - name: "reviews"
+    label: "Reviews"
+    label_singular: "Review"
+    folder: "src/post"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} — {{date | date('MMM YYYY')}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { name: "title", label: "Headline", widget: "string", hint: "Shown big at the top of the review." }
+      - { name: "index", label: "Review number", widget: "string", default: "03", hint: "Just the number, e.g. 03." }
+      - { name: "eyebrow", label: "District / area", widget: "string", hint: "e.g. District 5 · Pasir Panjang" }
+      - { name: "standfirst", label: "Opening line", widget: "text", hint: "One or two sentences under the headline." }
+      - { name: "date", label: "Date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD MMM YYYY", time_format: false }
+      - { name: "readtime", label: "Reading time", widget: "string", default: "6 min read", required: false }
+      - { name: "hero", label: "Main photograph", widget: "image", hint: "Wide shot. Runs full width under the headline." }
+      - { name: "heroAlt", label: "Describe the main photo", widget: "string", required: false, hint: "For screen readers and Google." }
+      - { name: "thumb", label: "Thumbnail", widget: "image", hint: "Shown in the review list. Can be the same photo." }
+      - { name: "meta", label: "One-line facts", widget: "string", hint: "e.g. UOL & Singapore Land · 520 units · District 21" }
+      - { name: "dek", label: "List summary", widget: "text", hint: "The teaser shown on the reviews page." }
+      - { name: "tags_list", label: "Tags", widget: "list", required: false, default: ["New launch"] }
+      - name: "specs"
+        label: "Spec panel"
+        widget: "list"
+        hint: "The facts grid. Developer, units, tenure, MRT and so on."
+        fields:
+          - { name: "label", label: "Label", widget: "string" }
+          - { name: "value", label: "Value", widget: "string" }
+      - { name: "body", label: "The review", widget: "markdown", hint: "Use ## for section headings. A > line becomes a pull quote." }
+      - name: "gallery"
+        label: "Your photographs"
+        widget: "list"
+        required: false
+        hint: "Shown as a grid with your credit underneath."
+        fields:
+          - { name: "image", label: "Photo", widget: "image" }
+          - { name: "alt", label: "Describe it", widget: "string", required: false }
+      - { name: "pros", label: "What works", widget: "list", hint: "One point per line." }
+      - { name: "cons", label: "What does not", widget: "list", hint: "One point per line. Be honest — this is the whole point." }
+      - { name: "conclusion", label: "Conclusion", widget: "markdown", hint: "Would you buy it? Who is it for?" }
+      - { name: "title_tag", label: "Google title", widget: "string", required: false, hint: "Under 60 characters. Leave blank to use the headline." }
+      - { name: "description", label: "Google description", widget: "text", required: false, hint: "Under 160 characters." }
+      - { name: "disclaimer", label: "Disclaimer", widget: "text", required: false, hint: "Leave blank for the standard one." }
