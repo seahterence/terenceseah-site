@@ -1,53 +1,70 @@
 ---
-title: "The Hillshore, on the old Gloria Mansion site"
-title_tag: "The Hillshore review: former Gloria Mansion, Pasir Panjang | Terence Seah"
-description: "A first-hand review of The Hillshore on Pasir Panjang Road — 59 freehold units on the old Gloria Mansion site. Layouts, facilities, history and who it suits."
-index: "01"
-eyebrow: "District 5 · Pasir Panjang"
-standfirst: "Fifty-nine freehold units on a technically awkward slope at 292 Pasir Panjang Road — a stretch that was once known as millionaire's row. I visited the show gallery before public launch."
+title: The Hillshore, on the old Gloria Mansion site
+index: '01'
+eyebrow: District 5 · Pasir Panjang
+standfirst: Fifty-nine freehold units on a technically awkward slope at 292 Pasir Panjang Road — a stretch that was once known as millionaire's row. I visited the show gallery before public launch.
 date: 2024-01-30
-readtime: "8 min read"
+readtime: 8 min read
 hero: /img/heroart.jpg
-heroAlt: "The Hillshore, Pasir Panjang Road"
+heroAlt: The Hillshore, Pasir Panjang Road
 thumb: /img/hillshore.jpg
-meta: "Pasir Panjang Road · 59 units · Freehold"
-dek: "Two- to four-bedroom units including a rare dual key, ceilings up to 5.5m, and a badminton court nobody builds any more. On a stretch that was once called millionaire's row."
-tags_list: ["New launch", "District 5", "Freehold", "Dual key"]
+meta: Pasir Panjang Road · 59 units · Freehold
+dek: Two- to four-bedroom units including a rare dual key, ceilings up to 5.5m, and a badminton court nobody builds any more. On a stretch that was once called millionaire's row.
+tags_list:
+  - New launch
+  - District 5
+  - Freehold
+  - Dual key
 specs:
-  - { label: "Developer", value: "Hillside View Development" }
-  - { label: "Units", value: "59" }
-  - { label: "Structure", value: "2 blocks, 5 storeys" }
-  - { label: "Tenure", value: "Freehold" }
-  - { label: "Layouts", value: "2 – 4 BR + dual key" }
-  - { label: "Ceiling", value: "3.2m, up to 5.5m" }
-  - { label: "Nearest MRT", value: "CC25, 600m" }
-  - { label: "District", value: "D05 (RCR)" }
+  - label: Developer
+    value: Hillside View Development
+  - label: Units
+    value: '59'
+  - label: Structure
+    value: 2 blocks, 5 storeys
+  - label: Tenure
+    value: Freehold
+  - label: Layouts
+    value: 2 – 4 BR + dual key
+  - label: Ceiling
+    value: 3.2m, up to 5.5m
+  - label: Nearest MRT
+    value: CC25, 600m
+  - label: District
+    value: D05 (RCR)
 gallery:
-  - { image: /img/sunset2.jpg, alt: "Sunset over the sea, photographed from The Palisades" }
-  - { image: /img/sunset1.jpg, alt: "Sunset from The Palisades" }
-  - { image: /img/sunrise1.jpg, alt: "Sunrise from The Palisades" }
-  - { image: /img/sunset3.jpg, alt: "Evening view from The Palisades" }
+  - image: /img/sunset2.jpg
+    alt: Sunset over the sea, photographed from The Palisades
+  - image: /img/sunset1.jpg
+    alt: Sunset from The Palisades
+  - image: /img/sunrise1.jpg
+    alt: Sunrise from The Palisades
+  - image: /img/sunset3.jpg
+    alt: Evening view from The Palisades
 pros:
-  - "Well planned space throughout the development and the units"
-  - "MRT (CC25) is a mere 600m away"
-  - "Freehold — ideal for legacy planning"
-  - "Minutes' drive to VivoCity and Sentosa"
-  - "Good connectivity to major expressways"
-  - "Non-PPVC construction method"
+  - Well planned space throughout the development and the units
+  - MRT (CC25) is a mere 600m away
+  - Freehold — ideal for legacy planning
+  - Minutes' drive to VivoCity and Sentosa
+  - Good connectivity to major expressways
+  - Non-PPVC construction method
 cons:
-  - "Some may find it too quiet at night"
-  - "The views might be replaced by vibrancy in twenty years, with the redevelopment of the Great Southern Waterfront"
-conclusion: |
+  - Some may find it too quiet at night
+  - The views might be replaced by vibrancy in twenty years, with the redevelopment of the Great Southern Waterfront
+conclusion: |-
   If I wanted somewhere peaceful but still convenient, The Hillshore is one of the considerations — likely it will be priced attractively in comparison with leasehold condo sites of the same proximity to the city, or developments offering similar sea views. I view this as a property-hack purchase if the opportunity arises for me.
 
   Investment will also yield comfortably, with the MRT only 600m away. I can confirm this with a unit I leased out at The Palisades, built in the early 1990s just next door, for over $7,500 — a three-bedroom spanning close to 3,000 sqft with plentiful outdoor space. I remember having seven viewings on a single day, and the unit taken up within the day with multiple offers. I can only conclude that demand for this particular location is fairly strong.
+title_tag: 'The Hillshore review: former Gloria Mansion, Pasir Panjang | Terence Seah'
+description: A first-hand review of The Hillshore on Pasir Panjang Road — 59 freehold units on the old Gloria Mansion site. Layouts, facilities, history and who it suits.
+disclaimer: ''
 ---
 
 ## Introduction
 
 The Hillshore is developed by Hillside View Development Pte. Ltd., a subsidiary of FRX Capital Private Limited — a Singapore-based company specialising in real estate investment and development management, with a combined 60 years of real estate experience among the founders. They have the eye for unique land and the ability to transform it creatively into a modern development.
 
-Consisting of two blocks of five storeys with a basement carpark, they have truly transformed this technically challenging site into a well designed, spacious development with full facilities for the residents.
+Consisting of two blocks of five storeys with a basement carpark, they have truly transformed this technically challenging site into a well designed, spacious development with full facilities for the residences.
 
 ## Locale
 
