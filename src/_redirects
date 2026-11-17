@@ -1,0 +1,8 @@
+# Keep the apex and www on one canonical host (www), matching the site's canonical tags
+https://terenceseah.com/*  https://www.terenceseah.com/:splat  301!
+
+# Wix category pages that Google has indexed — send them to the reviews index
+/my-blog/categories/*  /my-blog/  301
+
+# Wix's internal search page no longer exists
+/search-results  /my-blog/  301
