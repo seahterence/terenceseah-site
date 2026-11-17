@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "terenceseah-site",
+  "compatibility_date": "2026-11-17",
+  // Purely static: Cloudflare serves the Eleventy build output directly.
+  // No Worker script, so no "main" entry point is needed.
+  "assets": {
+    "directory": "./_site"
+  },
+  // Gives a *.workers.dev preview hostname before the real domain is attached.
+  "workers_dev": true
+}
